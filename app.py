@@ -89,6 +89,22 @@ h1, h2, h3, h4, h5, h6 {
 label, p, span {
     color: #000000 !important;
 }
+            
+/* Navbar fix for mobile */
+@media (max-width: 768px) {
+    .stColumns {
+        flex-wrap: nowrap !important;
+    }
+    .stColumn {
+        flex: 1 !important;
+        min-width: 0 !important;
+    }
+}
+
+/* Hide Streamlit Branding */
+#MainMenu {visibility: hidden;}   /* Top-right menu */
+footer {visibility: hidden;}      /* Footer with Streamlit logo */
+header {visibility: hidden;}      /* Any header, optional */
 
 </style>
 """, unsafe_allow_html=True)
