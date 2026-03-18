@@ -173,15 +173,12 @@ with nav2:
     """, unsafe_allow_html=True)
 
 with nav3:
-    colA, colB = st.columns(2)
-
-    with colA:
-        if st.button("🏠 Home"):
-            st.session_state.page = "Home"
-
-    with colB:
-        if st.button("🔐 Admin"):
-            st.session_state.page = "Admin"
+    st.session_state.page = st.radio(
+        "",
+        options=["Home", "Admin"],
+        index=0 if st.session_state.page == "Home" else 1,
+        horizontal=True
+    )
 
 # ---------- HOME ----------
 if st.session_state.page == "Home":
