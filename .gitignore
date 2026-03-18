@@ -1,12 +1,5 @@
-# Python
+venv/
 __pycache__/
 *.pyc
-
-# Virtual environment
-venv/
-
-# Database file
-database.db
-
-# Environment variables
 .env
+database.db
